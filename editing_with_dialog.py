@@ -36,13 +36,7 @@ def main():
     opt = dict_to_nonedict(opt)
 
     # set up logger
-    save_log_path = f'{opt["path"]["log"]}'
-    dialog_logger = get_root_logger(
-        logger_name='dialog',
-        log_level=logging.INFO,
-        log_file=f'{save_log_path}/dialog.log')
-    dialog_logger.info(dict2str(opt))
-
+  
     save_image_path = f'{opt["path"]["visualization"]}'
     os.makedirs(save_image_path)
 
